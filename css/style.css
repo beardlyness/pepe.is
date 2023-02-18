@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+body{
+background-color: #00ab4e;
+font-family: 'VT323', monospace;
+font-weight: 400;
+color: #727272;
+text-align: center;
+overflow-x: auto;
+overflow-y: auto;
+text-rendering: optimizeLegibility;
+font-kerning: initial;
+-webkit-font-smoothing: subpixel-antialiased;
+-moz-osx-font-smoothing:  inherit;
+}
+
+section {
+max-width: 50%;
+margin: 15em auto auto auto;
+padding: 137px;
+background: #fff;
+border-radius: 3px;
+-webkit-box-shadow: 13px 20px 20px 5px rgb(6 5 5 / 50%);
+-moz-box-shadow: 13px 20px 20px 5px rgb(6 5 5 / 50%);
+box-shadow: 13px 20px 20px 5px rgb(6 5 5 / 50%);
+}
+
+/*----- Text -----*/
+
+h1 {
+font-size: calc(100% + 7vw);
+line-height: 1.2;
+margin: 0.1em 0;
+color: transparent;
+-webkit-background-clip: text;
+background-clip: text;
+background-repeat: no-repeat;
+transition: 0.5s ease-out;
+}
+
+h1.main {
+background-image: linear-gradient(to bottom, #00853e 45%, #00ab4e 55%);
+background-size: 100% 220%;
+background-position: 50% 100%;
+}
+
+h1.main:hover {
+background-position: 50% 0%;
+transform: rotateZ(180deg);
+transition: 1.5s;
+transition: transform 1.5s;
+-o-transition:  1.5s;
+-ms-transition: 1.5s;
+-webkit-transition: 1.5s;
+}
+
+
+h2, h3, h4, h5 {
+font-family: 'VT323', monospace;
+margin-top: 0.75em;
+margin-bottom: 0.75em;
+}
+
+p {
+line-height: 24px;
+position: relative;
+border-radius: 5px;
+font-size: 24px;
+word-wrap: break-word;
+}
+
+code {
+color: #238d24;
+background-color: #f9f2f4;
+border-radius: 4px;
+padding: 3px;
+}
+
+/*---- A HREF ----*/
+a {
+outline: none;
+color: #00853e;
+border:none;
+font-size:1em;
+cursor:pointer;
+text-decoration:none;
+text-shadow:none;
+transition:ease 200ms;
+-webkit-transition:ease 200ms;
+}
+
+a:visited {
+opacity:0.8;
+color: #black;
+transition:ease 200ms;
+-webkit-transition:ease 200ms;
+}
+
+a:hover {
+color:rgba(0,0,0,0.5);
+transition:ease 200ms;
+-webkit-transition:ease 200ms;
+}
+
+/*---- CUSTOM ----*/
+
+/*---- LOGO ----*/
+.logo {
+margin: 30px;
+max-width: 100%;
+max-height: 100%;
+transition: 1.5s;
+transition: transform 1.5s;
+-o-transition:  1.5s;
+-ms-transition: 1.5s;
+-webkit-transition: 1.5s;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+  transition: 1.5s;
+  transition: transform 1.5s;
+  -o-transition:  1.5s;
+  -ms-transition: 1.5s;
+  -webkit-transition: 1.5s;
+}
+
+@media only screen and (max-width:600px) {
+  h1 {
+  font-family: 'VT323', monospace;
+  font-weight: 200 !important;
+  font-size: 3em !important;
+  margin-top: 0.3em !important;
+  margin-bottom: 0.75em !important;
+  }
+  p {
+  line-height: 12px;
+  position: relative;
+  border-radius: 5px;
+  font-size: 12px;
+  word-wrap: break-word;
+  }
+  code {
+  font-size: 10px;
+  word-wrap: break-word;
+  }
+}
