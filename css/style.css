@@ -1,5 +1,7 @@
+/* FONT Imports */
 @import url('https://fonts.googleapis.com/css?family=VT323');
 
+/* Default Body */
 body{
 background-color: #00ab4e;
 font-family: 'VT323', monospace;
@@ -14,15 +16,122 @@ font-kerning: initial;
 -moz-osx-font-smoothing:  inherit;
 }
 
+
+/* Default Section */
 section {
 max-width: 50%;
-margin: 15em auto auto auto;
+margin: 2.5em auto auto auto;
 padding: 137px;
 background: #fff;
 border-radius: 3px;
--webkit-box-shadow: 13px 20px 20px 5px rgb(6 5 5 / 50%);
--moz-box-shadow: 13px 20px 20px 5px rgb(6 5 5 / 50%);
-box-shadow: 13px 20px 20px 5px rgb(6 5 5 / 50%);
+-webkit-box-shadow: 0px 2px 0px 5px rgb(6 5 5 / 45%);
+-moz-box-shadow: 0px 2px 0px 5px rgb(6 5 5 / 45%);
+box-shadow: 0px 2px 0px 5px rgb(6 5 5 / 45%);
+}
+
+/* Footer */
+div.footer {
+  padding: 20px;
+}
+
+/* Popup Alert Start */
+div.alert {
+  background-color: #555555;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin-top: 0em;
+  margin-bottom: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 24px;
+  border-radius: 3px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+div.alert.success {
+  background-color: #2ecc71;
+  color: white;
+}
+
+div.alert.info {
+  background-color: #0984e3;
+  color: white;
+}
+
+div.alert.wild {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+div.alert.message {
+  background-color: #555555;
+  color: white;
+}
+
+div.alert.warning {
+  background-color: #fd9f36;
+  color: white;
+}
+
+div.alert.red {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Close Button for Alert */
+.xalert {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.xalert:hover {
+  color: #555555;
+}
+/* Popup Alert End */
+
+/* Main Content */
+div.mainContent {
+  text-align: center;
+  padding: 20px;
+  line-height: 2em;
+  background-color: #00ab4e;
+  border-radius: 4px;
+}
+
+.contentBox {
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+
+li.terms {
+  font-size: 18px;
+  font-family: 'VT323', monospace;
+  line-height: 2em;
+  padding: 10px 30px 10px 30px;
+  width: 65%;
+  margin: auto;
+  text-align: center;
+}
+
+address {
+  display: inline-block;
+  width:25%;
+}
+
+p.address {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1em;
+  padding: 4px;
 }
 
 /*----- Text -----*/
@@ -59,14 +168,23 @@ h2, h3, h4, h5 {
 font-family: 'VT323', monospace;
 margin-top: 0.75em;
 margin-bottom: 0.75em;
+padding: 1em;
 }
 
 p {
 line-height: 24px;
 position: relative;
-border-radius: 5px;
-font-size: 24px;
+font-size: 28px;
+padding: 5px;
 word-wrap: break-word;
+}
+
+p.ticon {
+  line-height: 24px;
+  position: relative;
+  font-size: 42px;
+  margin: 10px 10px 25px 10px;
+  word-wrap: break-word;
 }
 
 code {
@@ -79,34 +197,98 @@ padding: 3px;
 /*---- A HREF ----*/
 a {
 outline: none;
-color: #00853e;
-border:none;
-font-size:1em;
-cursor:pointer;
-text-decoration:none;
-text-shadow:none;
-transition:ease 200ms;
--webkit-transition:ease 200ms;
-}
-
-a:visited {
-opacity:0.8;
-color: #black;
-transition:ease 200ms;
--webkit-transition:ease 200ms;
+color: #ffffff;
+border: none;
+font-size: 1em;
+cursor: pointer;
+text-decoration: none;
+text-shadow: none;
+transition: ease 200ms;
+-webkit-transition: ease 200ms;
 }
 
 a:hover {
-color:rgba(0,0,0,0.5);
+color:rgb(2 80 37);
 transition:ease 200ms;
 -webkit-transition:ease 200ms;
+}
+
+/*---- BUTTON ----*/
+a.button {
+  display: inline-flex;
+  position: relative;
+  text-transform: capitalize;
+  height: 64px;
+  min-width: 248px;
+  margin: 1.5em;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+a.button:hover {
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0.6;
+  transition: ease 500ms;
+  -webkit-transition: ease 500ms;
+  
+}
+
+a.button:active {
+    background-color: #8C8D8E;
+    opacity: 1;
+    transition: ease 500ms;
+    -webkit-transition: ease 500ms;
+}
+
+a.button.large {
+  text-transform: uppercase;
+  margin-top: 2em;
+  text-align: center;
+  border-radius: 4px;
+}
+
+a.button span {
+  margin: 7.5px 5px 10px 10px;
+  font-size: 32px;
+  font-family: 'VT323', monospace;
+  text-decoration: none;
+  line-height: 32px;
+  color: #fff;
+}
+
+/* Button Icon Color and Action */
+a.button.large.retry {
+  background-color: #612fe7;
+}
+
+a.button.large.share {
+  background-color: #00ab4e;
+}
+
+a.button.large.twitter {
+  background-color: rgb(20 182 185);
+}
+
+a.button.large.retry:hover, a.button.large.share:hover, a.button.large.twitter:hover {
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0.6;
+  transition: ease 500ms;
+  -webkit-transition: ease 500ms;
+}
+
+a.button.large.retry:active, a.button.large.share:active, a.button.large.twitter:active {
+  background-color: rgba(0,0,0,0.5);
+  opacity: 1;
+  transition: ease 500ms;
+  -webkit-transition: ease 500ms;
 }
 
 /*---- CUSTOM ----*/
 
 /*---- LOGO ----*/
 .logo {
-margin: 30px;
 max-width: 100%;
 max-height: 100%;
 transition: 1.5s;
@@ -125,6 +307,28 @@ transition: transform 1.5s;
   -webkit-transition: 1.5s;
 }
 
+.icons {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+
+/*---- INPUT ----*/
+input {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  cursor: grab;
+  font-size: 10px;
+  font-family: 'VT323', monospace;
+  font-weight: 200 !important;
+  font-size: 2em !important;
+  margin-top: 0.3em !important;
+  margin-bottom: 0.75em !important;
+  border-radius: 3px;
+  border-style: groove;
+}
+
 @media only screen and (max-width:600px) {
   h1 {
   font-family: 'VT323', monospace;
@@ -133,15 +337,11 @@ transition: transform 1.5s;
   margin-top: 0.3em !important;
   margin-bottom: 0.75em !important;
   }
-  p {
-  line-height: 12px;
+  li.terms, p, code {
+  line-height: 14px;
   position: relative;
   border-radius: 5px;
-  font-size: 12px;
-  word-wrap: break-word;
-  }
-  code {
-  font-size: 10px;
+  font-size: 14px;
   word-wrap: break-word;
   }
 }
