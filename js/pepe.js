@@ -1,3 +1,37 @@
+function reloadOnClick() {
+    window.location.reload();
+}
+
+function copyOnClick() {
+    // Get the value field
+    var copyText = document.getElementById("share_holder");
+  
+    // Selector field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For Mobile
+  
+    // Copy the value inside the input field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Alert Model for on Page Copy Prompt
+    alert("Copied the text: " + copyText.value);
+  }
+
+function tweetOnClick() {
+    // Get the value field
+    var copyText = document.getElementById("share_holder");
+
+    // Selector field
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For Mobile
+  
+    // Copy the value inside the input field
+    navigator.clipboard.writeText(copyText.value);
+
+    // Make Web Tweet with the value inside the copy value
+    window.open("https://twitter.com/intent/tweet?text=" + "Look what I got from (https://pepe.is) " + copyText.value)
+}
+
 // url Async requesting function
 function httpGetAsync(theUrl, callback)
 {
@@ -19,6 +53,7 @@ function tenorCallback_search(responsetext)
 {
     var response_objects = JSON.parse(responsetext);
     top_10_gifs = response_objects["results"];
+    document.getElementById("share_holder").value = top_10_gifs[0]["media"][0]["tinygif"]["url"];
     document.getElementById("share_gif").src = top_10_gifs[0]["media"][0]["tinygif"]["url"];
     document.getElementById("share_uri").href = top_10_gifs[0]["media"][0]["tinygif"]["url"];
     return;
