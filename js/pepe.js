@@ -1,5 +1,5 @@
 function reloadOnClick() {
-    window.location.reload();
+    grab_data();
 }
 
 function copyOnClick() {
@@ -13,9 +13,31 @@ function copyOnClick() {
     // Copy the value inside the input field
     navigator.clipboard.writeText(copyText.value);
 
-    // Alert Model for on Page Copy Prompt
-    alert("Copied the text: " + copyText.value);
+    // Show custom modal
+    showCopyModal(copyText.value);
   }
+
+// Show custom modal function
+function showCopyModal(url) {
+    var modal = document.getElementById("copyModal");
+    var urlDisplay = document.getElementById("modal-url-display");
+    urlDisplay.textContent = url;
+    modal.style.display = "block";
+}
+
+// Close modal function
+function closeModal() {
+    var modal = document.getElementById("copyModal");
+    modal.style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    var modal = document.getElementById("copyModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 function tweetOnClick() {
     // Get the value field
