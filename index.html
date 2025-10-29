@@ -31,28 +31,52 @@
         <p><code>!welcome!</code></p>
         <p>PePe/IS a random MeMe generator for the Frogman himself.</p>
         <p>Find Le Frog that matches you, and share it with your friends!</p>
-        <input type="url" id="share_holder" value="" disabled=""></input>
+        <div class="url-container">
+          <input type="url" id="share_holder" value="" disabled></input>
+          <button class="copy-url-button" onclick="copyOnClick();">
+            <span>📋</span>
+            <span>Copy URL</span>
+          </button>
+        </div>
         <div>
           <a class="button large retry" onClick="reloadOnClick();">
             <span class="ibuttons">
-              <img class="icons" src="img/refresh.png">
+              <img src="img/refresh.png" alt="Refresh">
             </span>
             <span><p class="ticon">refresh</p></span>
           </a>
           <a class="button large twitter" onclick="tweetOnClick();">
               <span>
-                <img class="icons" src="img/twitter.png">
+                <img src="img/twitter.png" alt="Twitter">
               </span>
               <span><p class="ticon">twitter</p></span>
           </a>
           <a class="button large share" onclick="copyOnClick();">
             <span>
-              <img class="icons" src="img/share.png">
+              <img src="img/share.png" alt="Share">
             </span>
             <span><p class="ticon">share</p></span>
           </a>
         </div>
     </section>
+
+    <!-- Custom Modal -->
+    <div id="copyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>🐸 Pepe URL Copied!</h2>
+          <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>The Pepe URL has been copied to your clipboard!</p>
+          <p class="modal-url" id="modal-url-display"></p>
+          <p>Share this rare Pepe with your friends! 🚀</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-button" onclick="closeModal()">Got it!</button>
+        </div>
+      </div>
+    </div>
 
     <div class="footer">
       <p><a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a> | <a href="https://github.com/pepe-is">Github</a></p>
