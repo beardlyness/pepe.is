@@ -23,28 +23,73 @@
        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
   <body>
-    <section>
+    <section class="policy-section">
       <a href="https://PePe.IS"><h1 class="main">PePe</h1></a>
       <div class="mainContent">
         <div class="contentBox">
-        <h2>Privacy Policy</h2>
-        <small>Last updated 02/28/2023</small>
-        <p>
-          <h3>What Information We Collect</h3>
-            <li class="terms">When accessing the service we collect various metadata about your request including but not limited to the full request object, IP Address, and User-Agent (this is a string which uniquely identifies your Web Browser). Additionally we collect user generated content when provided to us.</li>
-          <h3>How we use the collected information</h3>
-            <li class="terms">We use the information we collect to faciliate access to the service and provide it to you and to protect the service from fraud and abuse.</li>
-          <h3>How we protect the collected information</h3>
-            <li class="terms">We use a variety of technical measures to protect your information. This includes encrypting requests that go to and from our servers, encrypting information locally (commonly called end to end encryption) where possible, and developing strong information access controls to prevent unauthorized access.</li>
-          </p>
+          <h2 class="policy-title">Privacy Policy</h2>
+          
+          <div class="policy-content">
+            <h3 class="policy-heading">What Information We Collect</h3>
+            <p class="policy-text">
+              When accessing PePe.IS, we collect various metadata about your request including but not limited to the full request object, IP Address, and User-Agent (this is a string which uniquely identifies your Web Browser). Additionally, we collect user generated content when provided to us through our random Pepe meme generator service.
+            </p>
+
+            <h3 class="policy-heading">How We Use the Collected Information</h3>
+            <p class="policy-text">
+              We use the information we collect to facilitate access to the PePe.IS service and provide it to you. We also use this information to protect the service from fraud and abuse, ensuring a safe and enjoyable experience for all Pepe enthusiasts.
+            </p>
+
+            <h3 class="policy-heading">How We Protect the Collected Information</h3>
+            <p class="policy-text">
+              We use a variety of technical measures to protect your information. This includes encrypting requests that go to and from our servers, encrypting information locally (commonly called end-to-end encryption) where possible, and developing strong information access controls to prevent unauthorized access. Your Pepe memes are safe with us!
+            </p>
+
+            <h3 class="policy-heading">Third-Party Services</h3>
+            <p class="policy-text">
+              PePe.IS uses Tenor API to provide random Pepe meme images. When you use our service, requests are made to Tenor's servers. Please refer to Tenor's privacy policy for information about how they handle data.
+            </p>
+
+            <h3 class="policy-heading">Contact</h3>
+            <p class="policy-text">
+              If you have any questions or concerns about this privacy policy, please contact us at hi [AT] pepe [DOT] is
+            </p>
+          </div>
+          <small class="policy-date">Last updated 02/28/2023</small>
         </div>
-    </div>
+      </div>
     </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+      <span>⬆</span>
+    </button>
 
     <div class="footer">
       <p><a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a> | <a href="https://github.com/pepe-is">Github</a></p>
       <p><a href="mailto:hi [AT] pepe [DOT] is">hi [AT] pepe [DOT] is</a></p>
       <p>&copy;<script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script></p>
     </div>
+
+    <!-- Scroll to Top Script -->
+    <script>
+      // Show/hide scroll to top button
+      window.addEventListener('scroll', function() {
+        var scrollToTopBtn = document.getElementById('scrollToTop');
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add('visible');
+        } else {
+          scrollToTopBtn.classList.remove('visible');
+        }
+      });
+
+      // Scroll to top function
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    </script>
   </body>
 </html>
